@@ -11,19 +11,14 @@ set -e
 
 sudo apt update -y
 
+# Instaling JRE 17:
+sudo apt install fontconfig openjdk-17-jre
+
 # Instaling JRE from OpenJDK 11:
-sudo apt install default-jre -y
+#sudo apt install default-jre -y
 
 # Instaling the JDK
-sudo apt install default-jdk -y
-
-
-# add the repository key to your system:
-#wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key |sudo gpg --dearmor -o /usr/share/keyrings/jenkins.gpg
-
-#sudo sh -c 'echo deb [signed-by=/usr/share/keyrings/jenkins.gpg] http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-
-
+#sudo apt install default-jdk -y
 
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
@@ -43,11 +38,4 @@ sudo systemctl enable jenkins
 # Starting Jenkins 
 sudo systemctl start jenkins
 
-# Restore the jenkins 
-sudo service jenkins stop
-sudo rm -rf /var/lib/jenkins
-
-untar the download jekinhs file to -C / 
-
-sudo service jenkins start
 
