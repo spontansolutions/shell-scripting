@@ -43,5 +43,11 @@ sudo systemctl enable jenkins
 # Starting Jenkins 
 sudo systemctl start jenkins
 
+# Restore the jenkins 
+sudo service jenkins stop
+sudo rm -rf /var/lib/jenkins
 
+untar the download jekinhs file to -C / 
+
+sudo service jenkins start
 
