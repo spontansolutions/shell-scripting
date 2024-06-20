@@ -2,7 +2,7 @@
 
 #################################################
 						#
-This script will install JAVA and JENKINS 	#
+#This script will install JAVA and JENKINS 	#
 						#
 #################################################
 
